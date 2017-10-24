@@ -11,8 +11,8 @@ export TARGET=/target
 export PROGRAMS="dropbear dropbearkey dbclient scp"
 
 # Download the latest version of dropbear SSH
-if [ ! -f ~/dropbear-2015.67.tar.bz2 ]; then
-    wget -O ~/dropbear-2015.67.tar.bz2 https://matt.ucc.asn.au/dropbear/dropbear-2015.67.tar.bz2
+if [ ! -f ~/dropbear-2016.74.tar.bz2 ]; then
+    wget -O ~/dropbear-2016.74.tar.bz2 https://matt.ucc.asn.au/dropbear/dropbear-2016.74.tar.bz2
 fi
 
 #if [ ! -f ~/config.sub ]; then
@@ -32,9 +32,9 @@ for ARCH_NAME in mips arm x86; do
 
         # Start each build with a fresh source copy
         cd ~
-        rm -rf ~/dropbear-2015.67
-        tar xjf dropbear-2015.67.tar.bz2
-        cd dropbear-2015.67
+        rm -rf ~/dropbear-2016.74
+        tar xjf dropbear-2016.74.tar.bz2
+        cd dropbear-2016.74
 
 	# Apply the new config.guess and config.sub
 	cp ~/config.guess ~/config.sub .
